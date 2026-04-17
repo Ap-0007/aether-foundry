@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER // FOUNDRY - AUTONOMOUS SAAS FORGE</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- 3D Environment -->
+    <div id="canvas-container"></div>
+
+    <div id="hud">
+        <nav>
+            <div class="logo">AETHER // FOUNDRY</div>
+            <div class="vault-status">VAULT_ENCRYPTED // 0 PROJECTS</div>
+        </nav>
+
+        <div class="forge-container">
+            <div class="forge-card">
+                <div class="forge-title">PROJECT_FORGE // BETA_0.1</div>
+                <h1>Forge your Micro-SaaS.</h1>
+                <p class="subtitle">Enter an idea below. I will forge the landing page and the functional dashboard instantly. <b>No signup required for the free alpha.</b></p>
+                
+                <div style="font-size:11px; color:var(--gold); margin-bottom:15px; background:rgba(255,215,0,0.1); padding:10px; border-radius:5px; border-left:3px solid var(--gold);">
+                    <b>HOW TO USE:</b> 1. Type idea -> 2. Click Ignite -> 3. Wait for 'SUCCESS' -> 4. Open link on the right.
+                </div>
+
+                <div class="input-group">
+                    <textarea id="foundry-prompt" placeholder="e.g. A high-end legal researcher for UK property contracts..."></textarea>
+                </div>
+
+                <div id="gen-status">
+                    <div id="status-text">INITIATING_HEURISTIC_DRAFT...</div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <button id="btn-forge" class="btn-forge">Ignite the Forge</button>
+                <button onclick="document.getElementById('foundry-prompt').value='Autonomous Equity Researcher for Indian Markets'; document.getElementById('btn-forge').click();" style="margin-top:15px; width:100%; background:none; border:1px solid var(--gold); color:var(--gold); padding:10px; border-radius:10px; font-family:var(--font-mono); font-size:10px; cursor:pointer;">QUICK_START: FORGE EQUITY AGENT</button>
+            </div>
+        </div>
+
+        <aside id="vault-grid">
+            <div class="forge-title" style="margin-bottom: 5px;">THE_VAULT</div>
+            <!-- Forged projects will appear here -->
+        </aside>
+    </div>
+
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

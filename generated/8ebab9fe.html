@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalAI // Autonomous Personal Finance Coach for Gen Z</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap');
+        :root {
+            --primary: #ff9900;
+            --bg: #050505;
+        }
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 80% 20%, rgba(255, 153, 0, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(255, 153, 0, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: pulse 10s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+        header { padding: 80px 0; text-align: center; }
+        h1 { font-size: 64px; margin-bottom: 20px; font-weight: 700; background: linear-gradient(45deg, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-sub { font-size: 20px; opacity: 0.6; max-width: 600px; margin: 0 auto 40px; }
+        .btn-cta { background: var(--primary); color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: 0.3s; display: inline-block; }
+        .btn-cta:hover { transform: translateY(-5px); box-shadow: 0 10px 30px var(--primary); }
+        
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 100px 0; }
+        .feature-box { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .feature-box h3 { margin-bottom: 15px; color: var(--primary); }
+        
+        .pricing { text-align: center; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+        .price-card { background: rgba(255,255,255,0.05); border: 2px solid var(--primary); display: inline-block; padding: 60px; border-radius: 30px; }
+        .price-val { font-size: 48px; font-weight: bold; margin: 20px 0; }
+        
+        footer { padding: 40px; text-align: center; opacity: 0.3; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>PERSONALAI // CORE</div>
+            <h1>Autonomous Personal Finance Coach for Gen Z</h1>
+            <p class="hero-sub">The world's first AI-native solution for Personal Finance Coach for Gen Z. Scalable, secure, and professional.</p>
+            <a href="#pricing" class="btn-cta">Start Free Trial</a>
+        </header>
+
+        <section class="features">
+            <div class="feature-box">
+                <h3>Autonomous Analysis</h3>
+                <p>Deep neural analysis that adapts to your specific data patterns instantly.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Neural Execution</h3>
+                <p>Autonomous agents that execute complex workflows with zero human intervention.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Enterprise Scale</h3>
+                <p>Built on the Aether backbone, ensuring enterprise-grade security and speed.</p>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="price-card">
+                <div style="text-transform: uppercase; letter-spacing: 2px;">Alpha Tier</div>
+                <div class="price-val">$49 / mo</div>
+                <ul style="list-style: none; padding: 0; margin-bottom: 40px; opacity: 0.7;">
+                    <li>Unlimited Missions</li>
+                    <li>24/7 Support</li>
+                    <li>Custom Neural Models</li>
+                </ul>
+                <a href="#" class="btn-cta">Subscribe Now</a>
+            </div>
+        </section>
+
+        <footer>
+            PersonalAI © 2026 // POWERED BY AETHER_FOUNDRY
+        </footer>
+    </div>
+</body>
+</html>

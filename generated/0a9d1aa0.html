@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighAI // Autonomous high end school</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap');
+        :root {
+            --primary: #ff9900;
+            --bg: #050505;
+        }
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 80% 20%, rgba(255, 153, 0, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(255, 153, 0, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: pulse 10s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+        header { padding: 80px 0; text-align: center; }
+        h1 { font-size: 64px; margin-bottom: 20px; font-weight: 700; background: linear-gradient(45deg, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-sub { font-size: 20px; opacity: 0.6; max-width: 600px; margin: 0 auto 40px; }
+        .btn-cta { background: var(--primary); color: #000; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: 0.3s; display: inline-block; }
+        .btn-cta:hover { transform: translateY(-5px); box-shadow: 0 10px 30px var(--primary); }
+        
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 100px 0; }
+        .feature-box { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .feature-box h3 { margin-bottom: 15px; color: var(--primary); }
+        
+        .pricing { text-align: center; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+        .price-card { background: rgba(255,255,255,0.05); border: 2px solid var(--primary); display: inline-block; padding: 60px; border-radius: 30px; }
+        .price-val { font-size: 48px; font-weight: bold; margin: 20px 0; }
+        
+        footer { padding: 40px; text-align: center; opacity: 0.3; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div id="landing-view" class="container">
+        <header style="position:relative;">
+            <div style="position:absolute; top:-40px; width:100%; background:var(--primary); color:#000; font-size:11px; padding:5px; font-weight:bold; letter-spacing:1px; border-radius:10px;">PREMIUM_SaaS_FEATURES_UNLOCKED // FREE_ALPHA_ACCESS</div>
+            <div>HIGHAI // CORE</div>
+            <h1>Autonomous high end school</h1>
+            <p class="hero-sub">Strategic AI-intelligence for high end school. Mission-ready and fully autonomous.</p>
+            <button onclick="toggleView('dashboard')" class="btn-cta">Access Dashboard (Free)</button>
+        </header>
+
+        <section class="features">
+            <div class="feature-box">
+                <h3>Autonomous Analysis</h3>
+                <p>Deep neural analysis optimized for high end school.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Neural Execution</h3>
+                <p>Autonomous agents that execute complex multi-step workflows.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Enterprise Scale</h3>
+                <p>Blockchain-backed audit logs for every agent decision.</p>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="price-card" style="position:relative;">
+                <div style="position:absolute; top:-10px; right:-10px; background:red; color:#fff; font-size:10px; padding:5px 10px; border-radius:20px; font-weight:bold;">100% OFF (FOR_AMOGH)</div>
+                <div style="text-transform: uppercase; letter-spacing: 2px;">Alpha Tier</div>
+                <div class="price-val"><span style="text-decoration:line-through; opacity:0.3; font-size:24px;">$149</span> $0 / mo</div>
+                <ul style="list-style: none; padding: 0; margin-bottom: 40px; opacity: 0.7;">
+                    <li>Unlimited Missions</li>
+                    <li>24/7 Support</li>
+                    <li>Custom Neural Models</li>
+                </ul>
+                <button onclick="toggleView('dashboard')" class="btn-cta">Access Dashboard (Free)</button>
+            </div>
+        </section>
+
+        <footer>
+            HighAI © 2026 // POWERED BY AETHER_FOUNDRY
+        </footer>
+    </div>
+
+    <!-- Hidden View: Dashboard -->
+    <div id="dashboard-view" style="display:none; padding:60px; height:100vh; flex-direction:column;">
+        <nav style="display:flex; justify-content:space-between; margin-bottom:40px;">
+            <div style="font-weight:bold; color:var(--primary);">HighAI // DASHBOARD</div>
+            <div style="opacity:0.6;">SYSTEM_STATUS: <span style="color:var(--primary);">ACTIVE</span></div>
+        </nav>
+        
+        <div style="display:grid; grid-template-columns: 2fr 1fr; gap:40px; flex-grow:1;">
+            <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); border-radius:20px; padding:30px; display:flex; flex-direction:column; height: 100%;">
+                <div style="text-transform:uppercase; font-size:12px; letter-spacing:2px; margin-bottom:20px; opacity:0.5;">Neural Activity Stream (Mission Control)</div>
+                <div id="terminal" style="font-family:monospace; font-size:14px; color:var(--primary); opacity:0.8; overflow-y:auto; flex-grow:1; margin-bottom: 20px;">
+                    > Initializing kernel...<br>
+                    > Link established.<br>
+                    > Executing autonomous mission: Autonomous high end school...<br>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <input type="text" id="agent-input" placeholder="Enter command or query..." style="flex-grow:1; background:rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.1); padding:15px; border-radius:10px; color:#fff;">
+                    <button onclick="sendMessage()" class="btn-cta" style="padding: 10px 20px; border-radius: 10px;">Execute</button>
+                </div>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:40px;">
+                <div style="background:rgba(255,153,0,0.05); border:1px solid var(--primary); border-radius:30px; padding:30px; text-align:center;">
+                    <div style="font-size:12px; opacity:0.5; margin-bottom:10px;">PROBABILITY_SCORE</div>
+                    <div style="font-size:48px; font-weight:bold;">99.4%</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); border-radius:20px; padding:30px;">
+                    <div style="font-size:12px; opacity:0.5;">ACTIVE_NEURAL_SESSIONS</div>
+                    <div style="font-size:32px;">1,249</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const PROJECT_ID = '0a9d1aa0';
+
+        function toggleView(view) {
+            document.getElementById('landing-view').style.display = 'none';
+            document.getElementById('signup-view').style.display = 'none';
+            document.getElementById('dashboard-view').style.display = 'none';
+            
+            if(view === 'landing') {
+                document.getElementById('landing-view').style.display = 'block';
+            } else if(view === 'signup') {
+                document.getElementById('signup-view').style.display = 'flex';
+            } else if(view === 'dashboard') {
+                document.getElementById('dashboard-view').style.display = 'flex';
+                // startTerminal() - Removed for active chat
+            }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('agent-input');
+            const msg = input.value.trim();
+            if(!msg) return;
+            
+            const term = document.getElementById('terminal');
+            term.innerHTML += `<div style="color:#fff; margin-top:10px;">USER > ${msg}</div>`;
+            input.value = '';
+            term.scrollTop = term.scrollHeight;
+
+            try {
+                const res = await fetch('http://localhost:9922/api/spawn/chat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ project_id: PROJECT_ID, message: msg })
+                });
+                const data = await res.json();
+                term.innerHTML += `<div style="color:var(--primary); margin-top:5px;">AGENT > ${data.response}</div>`;
+                term.scrollTop = term.scrollHeight;
+            } catch (err) {
+                term.innerHTML += `<div style="color:red;">Error: Link severed. Verify central foundry is running.</div>`;
+            }
+        }
+
+        // Add Enter key listener
+        document.getElementById('agent-input')?.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>
